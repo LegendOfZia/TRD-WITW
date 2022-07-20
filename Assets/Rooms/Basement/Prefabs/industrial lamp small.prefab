@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5926237482804046554}
   - component: {fileID: 7318879371281622399}
   - component: {fileID: 4788757191672467893}
+  - component: {fileID: -7694176279422846103}
   m_Layer: 0
   m_Name: industrial lamp small
   m_TagString: Untagged
@@ -83,3 +84,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &-7694176279422846103
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6446314881457303648}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7407088323537760387, guid: de8cc2c8ad8d18c408899f2113220d05, type: 3}

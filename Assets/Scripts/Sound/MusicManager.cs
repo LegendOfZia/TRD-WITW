@@ -10,12 +10,12 @@ public class MusicManager : MonoBehaviour
     static float MusicVol = 1.0f;
     FMODUnity.StudioEventEmitter emitter;
 
-    // Start is called before the first frame update
-    void Start()
+    // Awake is called before any Start functions
+    void Awake()
     {
         if (instance != null && instance != this)
         {
-            Destroy(this);
+            Destroy(gameObject);
         }
         else
         {
@@ -43,6 +43,11 @@ public class MusicManager : MonoBehaviour
         else if (scene.name =="MainMenu") {
             UnmuteMusicLoop();
         }
+    }
+
+    public static MusicManager GetMusicManager()
+    {
+        return instance;
     }
 
     public void SetMusicParam(string paramName, float newValue)

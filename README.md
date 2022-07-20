@@ -1,5 +1,5 @@
-# GMTK-2022-Game-Jam-Team-Loz
-Creating a game together!
+# Where is the Witch?
 
-Project specifications: version 2021.3.3f LTS
+Unity version: 2021.3.6f1 LTS
+
 Render pipeline: Built-In

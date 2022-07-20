@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class MusicVictory : MonoBehaviour
 {
+    FMODUnity.StudioEventEmitter emitter;
+
     // Start is called before the first frame update
     void Start()
     {
-        var emitter = GetComponent<FMODUnity.StudioEventEmitter>();
+        emitter = GetComponent<FMODUnity.StudioEventEmitter>();
         emitter.SetParameter("MusicVol", MusicManager.GetMusicVol());
     }
 

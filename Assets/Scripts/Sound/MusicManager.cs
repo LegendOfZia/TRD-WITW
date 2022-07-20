@@ -8,6 +8,7 @@ public class MusicManager : MonoBehaviour
 {
     static MusicManager instance;
     static float MusicVol = 1.0f;
+    FMODUnity.StudioEventEmitter emitter;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +20,8 @@ public class MusicManager : MonoBehaviour
         else
         {
             instance = this;
+            emitter = GetComponent<FMODUnity.StudioEventEmitter>();
+            SceneManager.sceneLoaded += OnSceneLoad;
             StartMusicLoop();
         }
     }
@@ -27,32 +30,33 @@ public class MusicManager : MonoBehaviour
     void Update()
     {
         SetMusicParam("Danger", 50 * (float)Math.Sin(2 * Math.PI * Time.timeSinceLevelLoad / 120 - 0.5) + 50);
+    }
 
-        if (SceneManager.GetActiveScene().buildIndex == 2) {
+    private void OnSceneLoad(Scene scene, LoadSceneMode mode)
+    {
+        Debug.Log("OnSceneLoaded: " + scene.name);
+        Debug.Log(mode);
+
+        if (scene.name == "CompletionScreen") {
             MuteMusicLoop();
         }
-        else 
-        {
+        else if (scene.name =="MainMenu") {
             UnmuteMusicLoop();
         }
-
     }
 
     public void SetMusicParam(string paramName, float newValue)
     {
-        var emitter = GetComponent<FMODUnity.StudioEventEmitter>();
         emitter.SetParameter(paramName, newValue);
 
         if (paramName == "MusicVol")
         {
             MusicVol = newValue;
         }
-
     }
 
     public void StartMusicLoop()
     {
-        var emitter = GetComponent<FMODUnity.StudioEventEmitter>();
         emitter.Play();
     }
 
@@ -66,7 +70,8 @@ public class MusicManager : MonoBehaviour
         SetMusicParam("LoopActive", 1);
     }
 
-    public static float GetMusicVol(){
+    public static float GetMusicVol()
+    {
         return MusicVol;
     }
 

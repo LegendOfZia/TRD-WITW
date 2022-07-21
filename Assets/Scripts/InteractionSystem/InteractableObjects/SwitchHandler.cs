@@ -5,12 +5,12 @@ using UnityEngine;
 public class SwitchHandler : InteractableObject
 {
     public GameObject stick;
-    public List<GameObject> targetObjs;
-    private List<InteractableObject> targetInteracts;
+    /*public List<GameObject> targetObjs;
+    private List<InteractableObject> targetInteracts;*/
 
     public void Start()
     {
-        targetInteracts = new List<InteractableObject>();
+        /*targetInteracts = new List<InteractableObject>();
         foreach (GameObject obj in targetObjs)
         {
             if (obj.GetComponent<InteractableObject>() != null)
@@ -21,7 +21,7 @@ public class SwitchHandler : InteractableObject
             {
                 print("Designated target object: " + obj.name + "does not contain an InteractableObject script");
             }
-        }
+        }*/
     }
 
     public override void Toggle()
@@ -37,9 +37,9 @@ public class SwitchHandler : InteractableObject
             tmpPos.z = 0.08f;
         }
         stick.transform.localPosition = tmpPos;
-        foreach(InteractableObject inter in targetInteracts)
+        /*foreach(InteractableObject inter in targetInteracts)
         {
             inter.Toggle();
-        }
+        }*/
     }
 }

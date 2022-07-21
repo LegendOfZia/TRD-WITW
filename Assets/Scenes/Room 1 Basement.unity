@@ -276,7 +276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _targetTransform: {fileID: 26769202}
-  _distanceToTarget: 12
+  _distanceToTarget: 15
   _followSpeed: 3
 --- !u!81 &100713644
 AudioListener:
@@ -397,8 +397,8 @@ Transform:
   - {fileID: 1586810848}
   - {fileID: 655335204}
   - {fileID: 386831935}
-  - {fileID: 1529061923}
   - {fileID: 339253269}
+  - {fileID: 1529061923}
   - {fileID: 1970547509}
   - {fileID: 362878898}
   - {fileID: 465359354}
@@ -1401,6 +1401,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7977345477763921352}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &587730003
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 587730004}
+  m_Layer: 0
+  m_Name: falseLoc
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &587730004
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 587730003}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 1.502, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 780042270}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!1001 &629588712
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1735,7 +1766,13 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 874522548}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &780042266
+--- !u!4 &780042270 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 611830351096076400, guid: 92f56bc6a0b9faa4d99f3ecb60667919,
+    type: 3}
+  m_PrefabInstance: {fileID: 874522548}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &780042271
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1744,31 +1781,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 780042265}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccc744859bcfe054faf77a50646e632a, type: 3}
+  m_Script: {fileID: 11500000, guid: 0aaf434cd30f41548beddd471f251243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TagString: Dice
-  OnDiceHit:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 780042265}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!4 &780042270 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 611830351096076400, guid: 92f56bc6a0b9faa4d99f3ecb60667919,
-    type: 3}
-  m_PrefabInstance: {fileID: 874522548}
-  m_PrefabAsset: {fileID: 0}
+  startOn: 1
+  trueLoc: {fileID: 1521587950}
+  falseLoc: {fileID: 587730003}
 --- !u!1001 &846611717
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1941,17 +1959,17 @@ PrefabInstance:
     - target: {fileID: 611830351096076400, guid: 92f56bc6a0b9faa4d99f3ecb60667919,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.8089666
+      value: 6.32
       objectReference: {fileID: 0}
     - target: {fileID: 611830351096076400, guid: 92f56bc6a0b9faa4d99f3ecb60667919,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11.335457
+      value: 11.78
       objectReference: {fileID: 0}
     - target: {fileID: 611830351096076400, guid: 92f56bc6a0b9faa4d99f3ecb60667919,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -31.373793
+      value: -31.09
       objectReference: {fileID: 0}
     - target: {fileID: 611830351096076400, guid: 92f56bc6a0b9faa4d99f3ecb60667919,
         type: 3}
@@ -1991,7 +2009,7 @@ PrefabInstance:
     - target: {fileID: 932576823953988909, guid: 92f56bc6a0b9faa4d99f3ecb60667919,
         type: 3}
       propertyPath: m_Name
-      value: 6Sided Variant 16
+      value: MovingTriggerDie
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5934487603230517168, guid: 92f56bc6a0b9faa4d99f3ecb60667919, type: 3}
@@ -2735,48 +2753,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 297251073}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1395704666
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1395704662}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccc744859bcfe054faf77a50646e632a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TagString: Dice
-  OnDiceHit:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1395704668}
-        m_TargetAssemblyTypeName: SwitchHandler, Assembly-CSharp
-        m_MethodName: Toggle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &1395704668
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1395704662}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02fcb0c1ac1af5d43adea9bbf1e9b91f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stick: {fileID: 498361827}
-  remoteObj: {fileID: 780042265}
 --- !u!135 &1395704669
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2796,6 +2772,60 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 297251073}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1395704673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1395704662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82ebc861fc24bc842b1596322b52ad43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startOn: 1
+  stick: {fileID: 498361827}
+--- !u!114 &1395704676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1395704662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccc744859bcfe054faf77a50646e632a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TagString: Dice
+  OnDiceHit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1395704673}
+        m_TargetAssemblyTypeName: SwitchHandler, InteractionSystemAssembly
+        m_MethodName: Toggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 780042271}
+        m_TargetAssemblyTypeName: MovingTriggerDieHandler, InteractionSystemAssembly
+        m_MethodName: Toggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &1419885633 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 491958, guid: 9e2131326fc97464987f58ebcb08832a,
@@ -2834,6 +2864,37 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -4411361228764603502, guid: 849a6b535fa09d56d9349af551581113, type: 3}
+--- !u!1 &1521587950
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1521587951}
+  m_Layer: 0
+  m_Name: trueLoc
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1521587951
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521587950}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 780042270}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!1001 &1526453952
 PrefabInstance:
   m_ObjectHideFlags: 0

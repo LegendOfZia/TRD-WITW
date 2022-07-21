@@ -10,18 +10,7 @@ public class SwitchHandler : InteractableObject
 
     public void Start()
     {
-        /*targetInteracts = new List<InteractableObject>();
-        foreach (GameObject obj in targetObjs)
-        {
-            if (obj.GetComponent<InteractableObject>() != null)
-            {
-                targetInteracts.Add(obj.GetComponent<InteractableObject>());
-            }
-            else
-            {
-                print("Designated target object: " + obj.name + "does not contain an InteractableObject script");
-            }
-        }*/
+
     }
 
     public override void Toggle()
@@ -37,9 +26,6 @@ public class SwitchHandler : InteractableObject
             tmpPos.z = 0.08f;
         }
         stick.transform.localPosition = tmpPos;
-        /*foreach(InteractableObject inter in targetInteracts)
-        {
-            inter.Toggle();
-        }*/
+
     }
 }

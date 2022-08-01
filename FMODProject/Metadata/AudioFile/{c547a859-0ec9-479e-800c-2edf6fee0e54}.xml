@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{c547a859-0ec9-479e-800c-2edf6fee0e54}">
+		<property name="assetPath">
+			<value>RC1 - Layer 3.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>202.72800000000001</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{595d4fcb-ac2c-4ac4-b750-686e2ef6da83}</destination>
+		</relationship>
+	</object>
+</objects>

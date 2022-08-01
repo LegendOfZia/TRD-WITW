@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{dbb7d947-ea86-469c-8c72-a869bea5200a}">
+		<property name="assetPath">
+			<value>End Theme 2022-07-17 1655.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>10.055999999999999</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{595d4fcb-ac2c-4ac4-b750-686e2ef6da83}</destination>
+		</relationship>
+	</object>
+</objects>

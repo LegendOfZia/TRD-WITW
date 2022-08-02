@@ -52,11 +52,16 @@ public class MusicManager : MonoBehaviour
 
     public void SetMusicParam(string paramName, float newValue)
     {
-        emitter.SetParameter(paramName, newValue);
-
-        if (paramName == "MusicVol")
+        if (paramName == "MasterVol" || paramName == "MusicVol" || paramName == "SFXVol")
         {
+            // Set global FMOD parameter
+            FMODUnity.RuntimeManager.StudioSystem.setParameterByName(paramName, newValue);
             MusicVol = newValue;
+        }
+        else
+        {
+            // Set emitter instance parameter
+            emitter.SetParameter(paramName, newValue);    
         }
     }
 

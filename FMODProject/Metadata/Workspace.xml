@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Workspace" id="{3d5b27d7-0034-4834-b52a-d355d5c5677f}">
 		<property name="builtBanksOutputDirectory">
-			<value>../../GMTK-2022-Game-Jam-Team-Loz/FMODAssets</value>
+			<value>../FMODAssets</value>
 		</property>
 		<relationship name="masterEventFolder">
 			<destination>{94a55f31-e3e5-4ae7-8e66-3d52b98f9d4c}</destination>

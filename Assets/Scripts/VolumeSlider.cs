@@ -10,12 +10,12 @@ public class VolumeSlider : MonoBehaviour
     void Start()
     {
         slider = GetComponent<Slider>();
-        slider.SetValueWithoutNotify(MusicManager.MusicVol);
+        slider.SetValueWithoutNotify(AudioManager.MusicVol);
     }
 
     public void VolSliderChange()
     {
-        MusicManager.MusicVol = slider.value;
+        AudioManager.MusicVol = slider.value;
         Debug.Log("Music vol change: " + slider.value);
     }
 }

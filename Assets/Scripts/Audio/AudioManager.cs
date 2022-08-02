@@ -4,12 +4,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MusicManager : MonoBehaviour
+public class AudioManager : MonoBehaviour
 {
-    static MusicManager instance;
+    static AudioManager instance;
     FMODUnity.StudioEventEmitter emitter;
 
-    public static MusicManager GetMusicManager()
+    public static AudioManager GetAudioManager()
     {
         return instance;
     }
@@ -125,7 +125,7 @@ public class MusicManager : MonoBehaviour
     {
         // Set emitter instance parameter
         // TODO: Split into separate MusicPlayer?
-        emitter.SetParameter(paramName, newValue);    
+        emitter.SetParameter(paramName, newValue);
     }
 
     public void StartMusic()

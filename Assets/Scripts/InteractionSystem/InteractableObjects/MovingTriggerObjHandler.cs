@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class MovingTriggerObjHandler : InteractableObject
 {
-    public GameObject trueLoc;
-    public GameObject falseLoc;
-    private Transform trueTrn;
-    private Transform falseTrn;
+    public GameObject onLoc;
+    public GameObject offLoc;
+    private Transform trueTform;
+    private Transform falseTform;
 
     private void Start()
     {
-        trueTrn = trueLoc.GetComponent<Transform>();
-        falseTrn = falseLoc.GetComponent<Transform>();
+        trueTform = onLoc.GetComponent<Transform>();
+        falseTform = offLoc.GetComponent<Transform>();
     }
 
     public override void Toggle()
@@ -20,14 +20,14 @@ public class MovingTriggerObjHandler : InteractableObject
         base.Toggle();
         if(Switched)
         {
-            transform.position = trueTrn.position;
-            transform.rotation = trueTrn.rotation;
-            transform.localScale = trueTrn.localScale;
+            transform.position = trueTform.position;
+            transform.rotation = trueTform.rotation;
+            transform.localScale = trueTform.localScale;
         } else
         {
-            transform.position = falseTrn.position;
-            transform.rotation = falseTrn.rotation;
-            transform.localScale = falseTrn.localScale;
+            transform.position = falseTform.position;
+            transform.rotation = falseTform.rotation;
+            transform.localScale = falseTform.localScale;
         }
     }
 }

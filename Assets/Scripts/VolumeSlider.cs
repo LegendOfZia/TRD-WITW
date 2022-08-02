@@ -5,21 +5,17 @@ using UnityEngine.UI;
 
 public class VolumeSlider : MonoBehaviour
 {
-    [SerializeField] private string paramName = "MusicVol";
-    public MusicManager musicManager;
-    private  Slider slider;
+    private Slider slider;
 
     void Start()
     {
         slider = GetComponent<Slider>();
-        slider.SetValueWithoutNotify(MusicManager.GetMusicVol());
-        musicManager = MusicManager.GetMusicManager();
+        slider.SetValueWithoutNotify(MusicManager.MusicVol);
     }
 
     public void VolSliderChange()
     {
-        //Change slider value
-        musicManager.SetMusicParam(paramName, slider.value);
-        Debug.Log("Vol change " + slider.value);
+        MusicManager.MusicVol = slider.value;
+        Debug.Log("Music vol change: " + slider.value);
     }
 }

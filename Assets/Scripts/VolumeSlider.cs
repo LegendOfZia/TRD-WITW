@@ -15,6 +15,7 @@ public class VolumeSlider : MonoBehaviour
 
     public void VolSliderChange()
     {
+        // TODO: Change to master volume once sfx are added
         AudioManager.MusicVol = slider.value;
         Debug.Log("Music vol change: " + slider.value);
     }

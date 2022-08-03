@@ -50,6 +50,8 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    public int AreaDanger = 0;
+
     private static float GetAudioVolume(string volumeParam)
     {
         if (volumeParam == "MasterVol" || volumeParam == "MusicVol" || volumeParam == "SFXVol")
@@ -105,7 +107,15 @@ public class AudioManager : MonoBehaviour
     void Update()
     {
         // TODO: Make Danger into FMOD global parameter?
-        SetMusicParam("Danger", 50 * (float)Math.Sin(2 * Math.PI * Time.timeSinceLevelLoad / 120 - 0.5) + 50);
+
+        // TODO: Move out of Update and into function that is only called when something changes?
+        // TODO: Account for the player and player health not existing
+        // Calculate danger level
+        // If health < 10% then danger = 100
+        // else danger = area danger
+
+        //SetMusicParam("Danger", 50 * (float)Math.Sin(2 * Math.PI * Time.timeSinceLevelLoad / 120 - 0.5) + 50);
+        SetMusicParam("Danger", AreaDanger);
     }
 
     private void OnSceneLoad(Scene scene, LoadSceneMode mode)
@@ -115,6 +125,7 @@ public class AudioManager : MonoBehaviour
 
         if (scene.name == "CompletionScreen") {
             StopMusic();
+            AreaDanger = 0;
         }
         else if (scene.name =="MainMenu") {
             StartMusic();

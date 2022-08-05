@@ -1333,8 +1333,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 689cda241a134a345bb6ec5fa805bbdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paramName: MusicVol
-  musicManager: {fileID: 1000962743}
 --- !u!1 &901023316
 GameObject:
   m_ObjectHideFlags: 0
@@ -1647,6 +1645,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43be6f94cb94e7c4d9f6ba56d8f5e280, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AreaDanger: 0
 --- !u!4 &1000962745
 Transform:
   m_ObjectHideFlags: 0
@@ -1681,7 +1680,7 @@ MonoBehaviour:
       Data2: 1252596931
       Data3: 1648986296
       Data4: -2022273813
-    Path: event:/Gameplay Loop
+    Path: event:/Music/Gameplay Loop
   Event: 
   PlayEvent: 0
   StopEvent: 0

@@ -1115,7 +1115,7 @@ MonoBehaviour:
       Data2: 1179823677
       Data3: -641864059
       Data4: 1414963372
-    Path: event:/Victory
+    Path: event:/Music/Victory
   Event: 
   PlayEvent: 1
   StopEvent: 2

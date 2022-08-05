@@ -483,17 +483,17 @@ Transform:
   - {fileID: 1586810848}
   - {fileID: 543450653347017169}
   - {fileID: 1529061923}
-  - {fileID: 1273778146}
-  - {fileID: 332073436}
-  - {fileID: 797388475}
-  - {fileID: 169056303}
   - {fileID: 200381413}
   - {fileID: 1176097896}
   - {fileID: 1247851282}
-  - {fileID: 1777144270}
+  - {fileID: 1273778146}
+  - {fileID: 332073436}
   - {fileID: 1827945003}
+  - {fileID: 797388475}
   - {fileID: 1943643832}
+  - {fileID: 169056303}
   - {fileID: 77097112}
+  - {fileID: 1777144270}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2855,6 +2855,36 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 297251073}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1395704673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1395704662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1445343576
+      Data2: 1237034576
+      Data3: 1483494816
+      Data4: -1625225245
+    Path: event:/SFX/Switch
+  Event: 
+  PlayEvent: 7
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!4 &1419885633 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 491958, guid: 9e2131326fc97464987f58ebcb08832a,
@@ -3283,6 +3313,25 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1586810843}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1605164430 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4551260597162496753, guid: 92baa850437fb634fb92b765ea26095a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1526453952}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1605164441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1605164430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
 --- !u!4 &1614445834 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 491958, guid: 9e2131326fc97464987f58ebcb08832a,

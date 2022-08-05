@@ -319,10 +319,12 @@ MonoBehaviour:
   - Master
   Banks:
   - Music
+  - SFX
   BanksToLoad:
   - Master
   - Master.strings
   - Music
+  - SFX
   LiveUpdatePort: 9264
   EnableMemoryTracking: 0
   AndroidUseOBB: 0

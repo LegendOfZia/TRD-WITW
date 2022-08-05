@@ -81,7 +81,7 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
 
-# FMOD
+# FMOD Unity
 !/[Aa]ssets/Plugins/FMOD/**/lib/*
 !/[Aa]ssets/Gizmos/FMOD/*
 !/[Aa]ssets/Editor Default Resources/FMOD/*
@@ -89,3 +89,9 @@ crashlytics-build.properties
 /[Aa]ssets/StreamingAssets/**/*.bank
 /[Aa]ssets/StreamingAssets/**/*.bank.meta
 fmod_editor.log
+
+# FMOD Project
+/FMODProject/.cache/
+/FMODProject/.unsaved/
+/FMODProject/.user/
+/FMODProject/Assets/

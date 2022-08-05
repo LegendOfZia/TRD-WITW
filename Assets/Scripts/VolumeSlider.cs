@@ -5,18 +5,18 @@ using UnityEngine.UI;
 
 public class VolumeSlider : MonoBehaviour
 {
-    [SerializeField] private string paramName = "MusicVol";
-    public MusicManager musicManager;
-    private  Slider slider;
+    private Slider slider;
 
     void Start()
     {
         slider = GetComponent<Slider>();
+        slider.SetValueWithoutNotify(AudioManager.MusicVol);
     }
 
-    public void VolSliderChange(){
-        //Change slider value
-        musicManager.SetMusicParam(paramName, slider.value);
-        Debug.Log("Vol change " + slider.value);
+    public void VolSliderChange()
+    {
+        // TODO: Change to master volume once sfx are added
+        AudioManager.MusicVol = slider.value;
+        Debug.Log("Music vol change: " + slider.value);
     }
 }
